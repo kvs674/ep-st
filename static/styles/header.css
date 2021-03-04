@@ -1,0 +1,120 @@
+.languages {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        font-weight: 700;
+        background: #4f4c4c;
+        line-height: 22px;
+        margin-right: 10px;
+        font-size: 18px;
+        border-radius: 2px;
+        color: white;
+        text-align: center;
+        padding: 1px 1px 1px 4px;
+}
+.valueup {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-weight: 700;
+	background: #4f4c4c;
+	line-height: 22px;
+	margin-left: 0px;
+	font-size: 18px;
+	border-radius: 2px;
+	color: white;
+	text-align: center;
+	padding: 1px 1px 1px 3px;
+}
+.arowup {
+	content: '';
+    width: 0;
+    height: 0;
+    font-size: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin: 0 6px 0 2px;
+}
+.network {
+	display: none;
+}
+
+#usermobile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #de2600;
+  position: absolute;
+  top: 65px;
+  right: 17px;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #ffff;
+  z-index: 10000;
+}
+#no-thumb {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  line-height: 38px;
+  text-transform: capitalize;
+  text-shadow: -1px -1px 2px #020634, 1px 1px 2px #020634;
+}
+
+    .mobile-menu {
+        z-index: 2000;
+        position: absolute;
+        display: block;
+        top: 110px;
+		right: calc(50% - 46%);
+		box-shadow: 0 2rem 4rem;
+    }
+	
+    .mobile-menu a {
+        border: 1px solid #ffffff;
+        font-weight: 700;
+        font-size: 12px;
+        margin: 0;
+        display: block;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        padding: 10px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: -1px -1px 1px 1px, 1px 1px 1px 1px;
+        text-shadow: none;
+        border-width: 0 0 1px;
+        background: #404040;
+        color: #fff;
+        white-space: normal;
+        display: block;
+        text-align: center;
+    }
+	
+	.mobile-menu a:hover {
+		background: #de2600;
+	}
+
+.icon-user-mobile {
+    display: block;
+    zoom: 1.1;
+    background-repeat: no-repeat;
+    background-image: url(../images/xv-icons-sprite.svg);
+    width: 24px;
+    height: 32px;
+    margin: 3px;
+    border-width: 4px;
+    background-position: -144px -40px;
+    position: relative;
+    top: calc(50% - 50%);
+    right: calc(50% - 21px);
+}
+
+.mobile-menu {
+    display: none;
+}
