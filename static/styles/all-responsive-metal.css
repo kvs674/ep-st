@@ -6215,6 +6215,9 @@ div.top img {
   form .row {
     margin: 0 0 1.5rem;
   }
+.search-cloud {
+	display: none;
+	}
   .block-channel {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
