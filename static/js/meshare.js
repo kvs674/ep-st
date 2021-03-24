@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
    var via = "EachPorn";
    var desc = document.querySelector('meta[name="description"]')['content'];
    var tags = document.querySelector('meta[name="keywords"]')['content'];
-   var imgvk = document.querySelector('meta[property="og:image"]')['content'];
-   
+   if (imgvk) {
+    var imgvk = document.querySelector('meta[property="og:image"]')['content'];
+}
    //console.log( url );
    //console.log( title );
 
@@ -55,13 +56,9 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 }
 
 if ( isMobile == true ) {
-$("#share-wa").hide();
+$("#share-wa").show();
+} else {
+	$("#share-wa").hide();
 }
-
-  
-  
-  
-  
-
 
 });
