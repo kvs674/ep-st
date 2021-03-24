@@ -84,7 +84,7 @@
 .miniplayer {
 	position: fixed;
 	width: 20%;
-	z-index: 100;
+	z-index: 9989;
 	left: 0px;
 	top: 0px;
 }
@@ -105,7 +105,7 @@ input[type=lola] {
 	width: 100%;
 	left: 0px;
 	top: 0px;
-	z-index: 100;
+	z-index: 9989;
 	}
 input[type=lola] {
   display: none;
