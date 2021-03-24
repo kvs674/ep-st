@@ -1479,12 +1479,12 @@ form .progressbar .progress {
   background-color: #000000;
 }
 .footer .up-arrow i {
-    font-size: 32px;
+    font-size: 34px;
+    line-height: 40px;
 }
 
 .footer .up-arrow {
     display: none;
-    transform: rotate(269deg);
     width: 40px;
     height: 40px;
     border-radius: 5px;
