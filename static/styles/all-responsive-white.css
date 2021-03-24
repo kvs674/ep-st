@@ -1473,6 +1473,27 @@ form .progressbar .progress {
 .footer {
   width: 100%;
 }
+.footer .up-arrow i {
+    font-size: 32px;
+}
+
+.footer .up-arrow {
+    display: none;
+    transform: rotate(269deg);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #dadada;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: visibility .3s linear, opacity .3s linear;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9998;
+}
 .footer .footer-wrap {
   max-width: 1235px;
   padding: 3rem 5px;
