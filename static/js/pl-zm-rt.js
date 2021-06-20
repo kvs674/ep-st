@@ -12,9 +12,9 @@
       rotate = 0;
 
 /* Grab the necessary DOM elements */
-  var stage = document.getElementById('stage'),
+  var stage = document.getElementsByClassName('player')[0],
       v = document.getElementsByTagName('video')[0],
-      controls = document.getElementById('controls');
+      controls = document.getElementsByClassName('player')[0];
   
 /* Array of possible browser specific settings for transformation */
   var properties = ['transform', 'WebkitTransform', 'MozTransform',
@@ -39,7 +39,7 @@
 /* If there is a controls element, add the player buttons */
 /* TODO: why does Opera not display the rotation buttons? */
   if(controls){
-    controls.innerHTML =  '<button class="play">play</button>'+
+    controls.innerHTML +=  '<button class="play">play</button>'+
                           '<div id="change">' +
                             '<button class="zoomin">+</button>' +
                             '<button class="zoomout">-</button>' +
