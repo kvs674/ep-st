@@ -603,9 +603,11 @@
 .kt-player .fp-controls .fp-brand {
 	float: right;
 	margin: 5px 10px 0 0;
+	cursor: default;
 }
-.kt-player .fp-controls .fp-brand:hover {
+.kt-player .fp-controls .fp-brand[href]:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 @media screen and (max-width: 400px) {
 	.kt-player .fp-controls .fp-brand {

@@ -708,9 +708,11 @@
 		.fp-brand {
 			float: right;
 			margin: 5px 10px 0 0;
+			cursor: default;
 
-			&:hover {
+			&[href]:hover {
 				text-decoration: underline;
+				cursor: pointer;
 			}
 
 			@media screen and (max-width: 400px) {
