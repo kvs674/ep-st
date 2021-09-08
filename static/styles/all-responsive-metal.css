@@ -4738,11 +4738,9 @@ div.top img {
   font-size: 14px;
   font-weight: 500;
   margin: 0 30px 2rem 0;
-  display: none;
-  /* display: flex; */
-  /* align-items: center; */
-  /* flex-wrap: wrap; */
-  /* visibility: hidden; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .block-details .item:first-child {
   display: block;
