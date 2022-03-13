@@ -307,7 +307,7 @@ function replace_runtime_params($page)
 					$show_ad_referers = false;
 					$skip_ad = false;
 
-					if (array_count($provider['devices']) == 0)
+					if (array_cnt($provider['devices']) == 0)
 					{
 						$show_ad_devices = true;
 					} else
