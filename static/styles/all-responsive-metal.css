@@ -1939,14 +1939,19 @@ h2 a {
   margin: 0 0 3rem;
   font-size: 14px;
   line-height: 1.2;
-  padding: 10px 0 0 10px;
-}
+  padding: 4rem;
+border: 1px solid #fff;}
 .empty-content h2 {
   font-size: 1.8rem;
   margin: 0 0 10px;
 }
 .empty-content a {
-  text-decoration: underline;
+  background: #eb0c0c;
+  border: 1px solid #746767;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 115%;
+  font-weight: 900;
 }
 .empty-content p {
   margin: 0 0 10px;
@@ -1963,6 +1968,31 @@ h2 a {
 }
 .empty-content ol li {
   list-style: decimal inside;
+}
+.empty-content1 {
+  margin: 2.25rem -4rem -4rem;
+  border-top: .0625rem solid #fff;
+  padding: 4rem;
+}
+.empty-content2 {
+  margin: 2.25rem -4rem -4rem;
+  border-top: .0625rem solid #fff;
+  padding: 4rem;
+}
+.empty-content3 {
+  margin:2.25rem -4rem -4rem;
+  border-top: .0625rem solid #fff;
+  padding: 4rem;
+}
+.empty-content4 {
+  margin: 2.25rem -4rem -4rem;
+  border-top: .0625rem solid #fff;
+  padding: 4rem;
+}
+.empty-content5 {
+  margin: 2.25rem -4rem -4rem;
+  border-top: .0625rem solid #fff;
+  padding: 4rem;
 }
 /* tags cloud *****/
 .tags-cloud {
@@ -6624,7 +6654,7 @@ div.top img {
     margin: -5px 0 0 -5px;
   }
   .empty-content {
-    padding: 0 0 0 5px;
+    padding: 4rem;
   }
   .member-menu + .main-container-user .item {
     margin: 5px 0 0 5px;
