@@ -1949,9 +1949,9 @@ border: 1px solid #fff;}
   background: #eb0c0c;
   border: 1px solid #746767;
   border-radius: 5px;
-  padding: 7px;
+  padding: 1px 5px 1px 5px;
   font-size: 115%;
-  font-weight: 900;
+  font-weight: 600;
 }
 .empty-content p {
   margin: 0 0 10px;
