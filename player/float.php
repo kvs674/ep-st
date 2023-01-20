@@ -2,7 +2,7 @@
 /* Developed by Kernel Team.
    http://kernel-team.com
 */
-header("Content-Type: application/json");
+header('Content-Type: application/json; charset=utf-8');
 
 require_once '../admin/include/setup.php';
 require_once '../admin/include/functions_base.php';
@@ -25,11 +25,19 @@ if ($_REQUEST['embed']=='true')
 					$embed_profile_domains=array_map('trim',explode(',',$embed_profile['embed_profile_domains']));
 					foreach ($embed_profile_domains as $embed_profile_domain)
 					{
-						if (strpos($parsed_url['host'],$embed_profile_domain)===strlen($parsed_url['host'])-strlen($embed_profile_domain))
+						if (strpos($parsed_url['host'], $embed_profile_domain) === strlen($parsed_url['host']) - strlen($embed_profile_domain))
 						{
-							$player_data=$embed_profile;
-							$player_url="$config[content_url_other]/player/embed/$embed_folder";
+							$player_data = $embed_profile;
+							$player_url = "$config[content_url_other]/player/embed/$embed_folder";
 							break 2;
+						} elseif (strpos($embed_profile_domain, '*') !== false)
+						{
+							if (preg_match('|' . str_replace('\*', '\w*', preg_quote($embed_profile_domain, "/")) . '|iu', $parsed_url['host']))
+							{
+								$player_data = $embed_profile;
+								$player_url = "$config[content_url_other]/player/embed/$embed_folder";
+								break 2;
+							}
 						}
 					}
 				}

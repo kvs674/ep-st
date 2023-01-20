@@ -5,7 +5,7 @@
 require_once '../admin/include/setup.php';
 require_once '../admin/include/functions_base.php';
 
-header("Content-Type: text/html");
+header('Content-Type: text/html; charset=utf-8');
 
 if ($_REQUEST['embed']=='true')
 {
@@ -24,10 +24,17 @@ if ($_REQUEST['embed']=='true')
 					$embed_profile_domains=array_map('trim',explode(',',$embed_profile['embed_profile_domains']));
 					foreach ($embed_profile_domains as $embed_profile_domain)
 					{
-						if (strpos($parsed_url['host'],$embed_profile_domain)===strlen($parsed_url['host'])-strlen($embed_profile_domain))
+						if (strpos($parsed_url['host'], $embed_profile_domain) === strlen($parsed_url['host']) - strlen($embed_profile_domain))
 						{
-							$player_data=$embed_profile;
+							$player_data = $embed_profile;
 							break 2;
+						} elseif (strpos($embed_profile_domain, '*') !== false)
+						{
+							if (preg_match('|' . str_replace('\*', '\w*', preg_quote($embed_profile_domain, "/")) . '|iu', $parsed_url['host']))
+							{
+								$player_data = $embed_profile;
+								break 2;
+							}
 						}
 					}
 				}

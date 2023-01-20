@@ -71,12 +71,21 @@ foreach ($embed_folders as $embed_folder)
 					if (strpos($parsed_url['host'], $embed_profile_domain) === strlen($parsed_url['host']) - strlen($embed_profile_domain))
 					{
 						$found_profile = true;
+					} elseif (strpos($embed_profile_domain, '*') !== false)
+					{
+						if (preg_match('|' . str_replace('\*', '\w*', preg_quote($embed_profile_domain, "/")) . '|iu', $parsed_url['host']))
+						{
+							$found_profile = true;
+						}
 					}
 				} elseif ($embed_profile_domain == 'empty')
 				{
 					$found_profile = true;
 				}
 			} elseif ($embed_profile_domain == 'empty')
+			{
+				$found_profile = true;
+			} elseif (strpos($config['project_licence_domain'], $embed_profile_domain) === strlen($config['project_licence_domain']) - strlen($embed_profile_domain))
 			{
 				$found_profile = true;
 			}
