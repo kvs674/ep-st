@@ -129,15 +129,17 @@
 }
 /* Social button design*/
 
-.fa {
-  padding: 3px;
-  font-size: 30px !important;
-  width: 40px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 10%;
-}
+/* .socialbtn { */
+  /* padding: 3px; */
+  /* font-size: 30px !important; */
+  /* width: 40px; */
+  /* text-align: center; */
+  /* text-decoration: none; */
+  /* margin: 5px 2px; */
+  /* border-radius: 10%; */
+  /* padding: 2px 3px; */
+  /* font-size: 30px !important; */
+/* } */
 
 .fa:hover {
     opacity: 0.7;
@@ -146,48 +148,78 @@
 .fa-whatsapp {
   background: #1ed92e;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-twitter-square {
   background: #55ACEE;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-reddit-square {
   background: #ff5700;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 .fa-vk {
   background: #a4c639;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-facebook-square {
   background: #3B5998;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-google {
   background: #dd4b39;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-linkedin-square {
   background: #007bb5;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-tumblr-square {
   background: #2c4762;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-envelope-square {
   background: #cb2027;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
 
 .fa-copy {
   background: #2c4762;
   color: white;
+  border-radius: 10%;
+  padding: 3px 5px;
+  font-size: 30px !important;
 }
