@@ -133,7 +133,7 @@
   padding: 2px;
   background: #303134;
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 2px;
   box-sizing: border-box;
   /* border: 1px solid #5f6368; */
 }
@@ -220,7 +220,7 @@
   padding: 3px 5px;
   font-size: 28px !important;
 }
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 420px) {
 .social {
   margin: 5px 0 5px 0;
   padding: 2px;
