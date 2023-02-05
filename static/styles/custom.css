@@ -220,7 +220,7 @@
   padding: 3px 5px;
   font-size: 28px !important;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
 .social {
   margin: 5px 0 5px 0;
   padding: 2px;
