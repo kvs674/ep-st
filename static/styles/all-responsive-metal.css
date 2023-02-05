@@ -4006,7 +4006,8 @@ div.top img {
   overflow: hidden;
   margin: 10px 0 0;
   display: block;
-  box-shadow: 0 0 4px 4px;
+  text-align: center;
+  /* box-shadow: 0 0 4px 4px; */
 }
 .sponsor img {
   width: 100%;
