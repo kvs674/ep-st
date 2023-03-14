@@ -3970,15 +3970,18 @@ div.top img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.block-model .model-list a {
+  color: #276fdb;
+}
 .block-model .model-list li {
   width: 33.33%;
-  color: #3f3f3f;
+  color: #d4d4d4;
   margin: 0 0 1.5rem;
   padding: 0 1rem 0 0;
 }
 
 .block-model .model-list li span {
-  color: #fffd;
+  color: #999;
 }
 .block-model .desc {
   line-height: 20px;
@@ -3987,7 +3990,7 @@ div.top img {
   line-height: 20px;
   clear: both;
   padding: 1.5rem 0 0;
-  color: #3f3f3f;
+  color: #d4d4d4;
 }
 
 .block-model .website a {
