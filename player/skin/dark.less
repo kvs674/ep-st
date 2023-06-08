@@ -393,7 +393,6 @@
 	.fp-time,
 	.fp-fullscreen,
 	.fp-unload,
-	.fp-speed,
 	.fp-menu,
 	.fp-title,
 	.fp-help {
@@ -594,6 +593,7 @@
 				.is-paused&,
 				.is-key-seeking&,
 				.is-loading&,
+				.is-speed-open&,
 				.is-settings-open& {
 					.opacity(1) !important;
 					.transition(opacity .3s);
@@ -612,6 +612,7 @@
 			.is-paused&,
 			.is-key-seeking&,
 			.is-loading&,
+			.is-speed-open&,
 			.is-settings-open& {
 				height: 30px !important;
 				.transition(height .3s);
@@ -717,6 +718,7 @@
 		}
 
 		.fp-brand,
+		.fp-speed,
 		.fp-time-elapsed,
 		.fp-time-duration,
 		.fp-time-left {
@@ -757,6 +759,126 @@
 		.fp-time-duration {
 			float: right;
 			margin: 0 15px;
+		}
+
+		.fp-speed {
+			position: relative;
+			float: right;
+			margin: 0 10px;
+			cursor: pointer;
+
+			.fp-speed-list {
+				display: none;
+				position: absolute;
+				margin-right: auto;
+				margin-left: auto;
+				bottom: 35px;
+				background-color: @colors-toolbar-background-nrgb;
+				background-color: @colors-toolbar-background;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-moz-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-o-transform: translateX(-50%);
+				transform: translateX(-50%);
+				.borderradius(3px);
+
+				.is-touch& {
+					bottom: 45px;
+				}
+
+				.fp-speed-list-item {
+					position: relative;
+
+					a {
+						display: block;
+						padding:  2px 15px;
+						line-height: 20px;
+						font-family: Arial,Helvetica,sans-serif;
+						font-size: 12px;
+						font-stretch: normal;
+						font-style: normal;
+						font-variant: normal;
+						font-weight: 400;
+						color: @colors-toolbar-text;
+						white-space: nowrap;
+						cursor: pointer;
+
+						&:hover {
+							color: @colors-toolbar-text-hover;
+						}
+
+						.is-touch& {
+							font-size: 16px;
+							padding: 4px 15px;
+						}
+					}
+
+					&.is-selected {
+						a:before {
+							position: absolute;
+							display: block;
+							content: '';
+							left: 5px;
+							top: 8px;
+							width: 6px;
+							height: 6px;
+							background: @colors-toolbar-text;
+							.borderradius(3px);
+
+							.is-touch& {
+								top: 12px;
+							}
+						}
+
+						a:hover:before {
+							background: @colors-toolbar-text-hover;
+						}
+					}
+
+					&.is-hd,
+					&.is-4k {
+						a:after {
+							display: block;
+							content: 'hd';
+							position: absolute;
+							right: 2px;
+							top: 0;
+							padding: 1px;
+							background: @colors-toolbar-hd-background;
+							color: @colors-toolbar-hd-text;
+							text-transform: uppercase;
+							font-family: Arial,Helvetica,sans-serif;
+							font-size: 9px;
+							line-height: normal;
+							font-stretch: normal;
+							font-style: normal;
+							font-variant: normal;
+							font-weight: bold;
+							.borderradius(1px);
+						}
+					}
+
+					&.is-4k {
+						a:after {
+							content: '4k';
+							background: @colors-toolbar-4k-background;
+							color: @colors-toolbar-4k-text;
+						}
+					}
+				}
+
+				.is-speed-open& {
+					display: block;
+
+					.is-touch& {
+						display: flex;
+						justify-content: space-around;
+						flex-wrap: wrap;
+						width: 120px;
+					}
+				}
+			}
 		}
 
 		.fp-settings {
@@ -1120,6 +1242,8 @@
 				display: block;
 			}
 
+			.is-speed-open.is-no-touch&:hover+.fp-timeline-tooltip,
+			.is-speed-open&.hover+.fp-timeline-tooltip,
 			.is-settings-open.is-no-touch&:hover+.fp-timeline-tooltip,
 			.is-settings-open&.hover+.fp-timeline-tooltip {
 				display: none;
@@ -1271,7 +1395,6 @@
 		.fp-title,
 		.fp-fullscreen,
 		.fp-unload,
-		.fp-speed,
 		.fp-engine,
 		.fp-waiting,
 		.fp-controls,

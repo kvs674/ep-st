@@ -294,7 +294,6 @@
 .kt-player .fp-time,
 .kt-player .fp-fullscreen,
 .kt-player .fp-unload,
-.kt-player .fp-speed,
 .kt-player .fp-menu,
 .kt-player .fp-title,
 .kt-player .fp-help {
@@ -484,6 +483,7 @@
 .is-paused.is-fullscreen.fixed-controls.kt-player .fp-controls,
 .is-key-seeking.is-fullscreen.fixed-controls.kt-player .fp-controls,
 .is-loading.is-fullscreen.fixed-controls.kt-player .fp-controls,
+.is-speed-open.is-fullscreen.fixed-controls.kt-player .fp-controls,
 .is-settings-open.is-fullscreen.fixed-controls.kt-player .fp-controls {
 	opacity: 1 !important;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
@@ -506,6 +506,7 @@
 .is-paused.is-mouseout.kt-player .fp-controls.move,
 .is-key-seeking.is-mouseout.kt-player .fp-controls.move,
 .is-loading.is-mouseout.kt-player .fp-controls.move,
+.is-speed-open.is-mouseout.kt-player .fp-controls.move,
 .is-settings-open.is-mouseout.kt-player .fp-controls.move {
 	height: 30px !important;
 	-webkit-transition: height 0.3s;
@@ -515,6 +516,7 @@
 .is-touch.is-paused.is-mouseout.kt-player .fp-controls.move,
 .is-touch.is-key-seeking.is-mouseout.kt-player .fp-controls.move,
 .is-touch.is-loading.is-mouseout.kt-player .fp-controls.move,
+.is-touch.is-speed-open.is-mouseout.kt-player .fp-controls.move,
 .is-touch.is-settings-open.is-mouseout.kt-player .fp-controls.move {
 	height: 40px !important;
 }
@@ -617,6 +619,7 @@
 	display: none;
 }
 .kt-player .fp-controls .fp-brand,
+.kt-player .fp-controls .fp-speed,
 .kt-player .fp-controls .fp-time-elapsed,
 .kt-player .fp-controls .fp-time-duration,
 .kt-player .fp-controls .fp-time-left {
@@ -630,6 +633,7 @@
 	color: #ccc;
 }
 .is-touch.kt-player .fp-controls .fp-brand,
+.is-touch.kt-player .fp-controls .fp-speed,
 .is-touch.kt-player .fp-controls .fp-time-elapsed,
 .is-touch.kt-player .fp-controls .fp-time-duration,
 .is-touch.kt-player .fp-controls .fp-time-left {
@@ -656,6 +660,109 @@
 .kt-player .fp-controls .fp-time-duration {
 	float: right;
 	margin: 0 15px;
+}
+.kt-player .fp-controls .fp-speed {
+	position: relative;
+	float: right;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list {
+	display: none;
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	bottom: 35px;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.8);
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.is-touch.kt-player .fp-controls .fp-speed .fp-speed-list {
+	bottom: 45px;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item {
+	position: relative;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item a {
+	display: block;
+	padding: 2px 15px;
+	line-height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	color: #ccc;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item a:hover {
+	color: #3f7bca;
+}
+.is-touch.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item a {
+	font-size: 16px;
+	padding: 4px 15px;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item.is-selected a:before {
+	position: absolute;
+	display: block;
+	content: '';
+	left: 5px;
+	top: 8px;
+	width: 6px;
+	height: 6px;
+	background: #ccc;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.is-touch.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item.is-selected a:before {
+	top: 12px;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item.is-selected a:hover:before {
+	background: #3f7bca;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item.is-hd a:after,
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item.is-4k a:after {
+	display: block;
+	content: 'hd';
+	position: absolute;
+	right: 2px;
+	top: 0;
+	padding: 1px;
+	background: #f00;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: normal;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	border-radius: 1px;
+	-webkit-border-radius: 1px;
+}
+.kt-player .fp-controls .fp-speed .fp-speed-list .fp-speed-list-item.is-4k a:after {
+	content: '4k';
+	background: #f00;
+	color: #fff;
+}
+.is-speed-open.kt-player .fp-controls .fp-speed .fp-speed-list {
+	display: block;
+}
+.is-touch.is-speed-open.kt-player .fp-controls .fp-speed .fp-speed-list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 120px;
 }
 .kt-player .fp-controls .fp-settings {
 	float: right;
@@ -993,6 +1100,8 @@
 .kt-player .fp-controls .fp-timeline.hover + .fp-timeline-tooltip {
 	display: block;
 }
+.is-speed-open.is-no-touch.kt-player .fp-controls .fp-timeline:hover + .fp-timeline-tooltip,
+.is-speed-open.kt-player .fp-controls .fp-timeline.hover + .fp-timeline-tooltip,
 .is-settings-open.is-no-touch.kt-player .fp-controls .fp-timeline:hover + .fp-timeline-tooltip,
 .is-settings-open.kt-player .fp-controls .fp-timeline.hover + .fp-timeline-tooltip {
 	display: none;
@@ -1133,7 +1242,6 @@
 .kt-player.is-error .fp-title,
 .kt-player.is-error .fp-fullscreen,
 .kt-player.is-error .fp-unload,
-.kt-player.is-error .fp-speed,
 .kt-player.is-error .fp-engine,
 .kt-player.is-error .fp-waiting,
 .kt-player.is-error .fp-controls,
